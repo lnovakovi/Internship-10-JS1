@@ -70,14 +70,14 @@ function CountLetters(inputToCount){
             counts[key] = 0;
         }
         counts[key]++;
-        if(maxKey == 0 || counts[key]> counts[maxKey])
+        if(maxKey === 0 || counts[key]> counts[maxKey])
         {
             maxKey=key;
         }
     }
     maxKey=counts[maxKey];
     for(let property in counts){
-        if( counts[property] == maxKey){
+        if( counts[property] === maxKey){
             let newObj = { "letter":property,"count":maxKey}
             myArrayOfLetters.push(newObj);
         }
